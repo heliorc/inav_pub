@@ -199,6 +199,12 @@
     BUSDEV_REGISTER_I2C(busdev_ms5425,      DEVHW_MS4525,       MS4525_I2C_BUS,     0x28,               NONE,           DEVFLAGS_NONE);
 #endif
 
+#if defined(USE_PITOT_PITOT_EXP)
+    #if !defined(PITOT_EXP_I2C_BUS)
+        #define PITOT_EXP_I2C_BUS PITOT_I2C_BUS
+    #endif
+    BUSDEV_REGISTER_I2C(busdev_pitot_exp,   DEVHW_PITOT_EXP,    PITOT_EXP_I2C_BUS,  0x4D,               NONE,           DEVFLAGS_USE_RAW_REGISTERS);
+#endif
 
 /** OTHER HARDWARE **/
 

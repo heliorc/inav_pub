@@ -28,6 +28,8 @@ BUSDEV_REGISTER_SPI_TAG(busdev_mpu6000,     DEVHW_MPU6000,      MPU6000_SPI_BUS,
 
 BUSDEV_REGISTER_I2C(    busdev_ms5611,      DEVHW_MS5611,       BARO_I2C_BUS,       0x77,               NONE,                       DEVFLAGS_USE_RAW_REGISTERS);
 
+BUSDEV_REGISTER_I2C(    busdev_pitot_exp,   DEVHW_PITOT_EXP,    PITOT_EXP_I2C_BUS,  0x4D,               NONE,                       DEVFLAGS_USE_RAW_REGISTERS);
+
 BUSDEV_REGISTER_I2C_TAG(busdev_hmc5883_int, DEVHW_HMC5883,      MAG_I2C_BUS_INT,    0x1E,               NONE,                   0,  DEVFLAGS_NONE);
 
 BUSDEV_REGISTER_I2C_TAG(busdev_hmc5883,     DEVHW_HMC5883,      MAG_I2C_BUS_EXT,    0x1E,               NONE,                   1,  DEVFLAGS_NONE);
